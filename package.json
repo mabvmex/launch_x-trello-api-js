@@ -4,11 +4,17 @@
   "description": "Práctica de Microsoft Launch X. Manipulación de API de Trello",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/.lib/jest"
+    "test": "node ./node_modules/.lib/jest",
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix"
   },
   "author": "mabvmex",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "trello": "^0.11.0"
   }
 }
