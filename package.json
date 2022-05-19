@@ -1,0 +1,14 @@
+{
+  "name": "trellojs",
+  "version": "1.0.0",
+  "description": "Práctica de Microsoft Launch X. Manipulación de API de Trello",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.lib/jest"
+  },
+  "author": "mabvmex",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.15.0"
+  }
+}
