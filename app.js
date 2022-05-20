@@ -1,23 +1,27 @@
 require("dotenv").config();
+const Trello = require("./main"); // Desde archivo main del proyecto forkeado
 
+// eslint-disable-next-line no-undef
 if (!process.env.TOKEN && !process.env.KEY) {
     throw new Error("No hay configuración con API KEY y con TOKEN");
 }
 
-let Trello = require("trello");
+// eslint-disable-next-line no-undef
 let trello = new Trello(process.env.KEY, process.env.TOKEN);
+let cardTitle = `== Mi propia tarjeta desde TRELLO API ==\n ${new Date()}`;
+const idList = "61d790f1e8d5cd5b0ccf9278";
 
-let cardTitle = `Card Nueva ${new Date()}`;
+console.log("::: EJECUTANDO! :::\n");
 
 trello.addCard(
     cardTitle,
-    "Launch X Card Description",
-    "00000000000000000000000001",
-    function (error, trelloCard) {
+    "El segundo parametro es la descripción de la tarjeta",
+    idList,
+    (error, trelloCard) => {
         if (error) {
-            console.log("Could not add card:", error);
+            console.log("Podría no haberse creado la tarjeta", error);
         } else {
-            console.log("Added card:", trelloCard);
+            console.log("Tarjeta agregada:", trelloCard);
         }
     }
 );

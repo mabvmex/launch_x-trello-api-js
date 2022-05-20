@@ -11,10 +11,18 @@
   "author": "mabvmex",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.15.0"
+    "eslint": "^8.15.0",
+    "trello": "^0.11.0"
   },
   "dependencies": {
+    "chai": "^4.3.4",
     "dotenv": "^16.0.1",
-    "trello": "^0.11.0"
+    "es6-promise": "^4.2.8",
+    "mocha": "^9.1.3",
+    "needle": "3.0.0",
+    "object-assign": "~4.1.0",
+    "q": "1.5.1",
+    "sinon": "^12.0.1",
+    "sinon-chai": "^3.7.0"
   }
 }
